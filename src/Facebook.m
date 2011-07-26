@@ -621,6 +621,11 @@ static NSString* kSDKVersion = @"2";
 
 }
 
+- (void)cancelPendingRequest {
+    [_request cancel];
+    [_request release], _request = nil;
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //FBLoginDialogDelegate
 
